@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SESD Assignment 5 Report - M. Hemavardhan (2403A51422)</title>
+  <style>
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a202c;
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .cover-page {
+      text-align: center;
+      border-bottom: 3px double #cbd5e1;
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+    }
+    .univ-title {
+      font-size: 24pt;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0;
+    }
+    .dept-title {
+      font-size: 14pt;
+      font-weight: 600;
+      color: #475569;
+      margin-top: 5px;
+    }
+    .doc-title {
+      font-size: 18pt;
+      font-weight: 700;
+      color: #c2410c;
+      margin: 30px 0 10px;
+    }
+    .doc-sub {
+      font-size: 13pt;
+      color: #334155;
+    }
+    .meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+    }
+    .meta-table th, .meta-table td {
+      border: 1px solid #cbd5e1;
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 11pt;
+    }
+    .meta-table th {
+      background-color: #f8fafc;
+      width: 35%;
+      font-weight: 700;
+    }
+    h2 {
+      font-size: 16pt;
+      color: #0f172a;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 6px;
+      margin-top: 36px;
+    }
+    h3 {
+      font-size: 13pt;
+      color: #334155;
+      margin-top: 20px;
+    }
+    p, li {
+      font-size: 11pt;
+    }
+    table.data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 10pt;
+    }
+    table.data-table th, table.data-table td {
+      border: 1px solid #cbd5e1;
+      padding: 8px 12px;
+      text-align: left;
+    }
+    table.data-table th {
+      background-color: #f1f5f9;
+      font-weight: 700;
+    }
+    pre {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 14px;
+      border-radius: 6px;
+      font-family: Courier, monospace;
+      font-size: 9.5pt;
+      overflow-x: auto;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 9pt;
+      font-weight: bold;
+    }
+    .badge-pass { background: #dcfce7; color: #15803d; }
+  </style>
+</head>
+<body>
+
+<div class="cover-page">
+  <div class="univ-title">SR UNIVERSITY</div>
+  <div class="dept-title">SCHOOL OF CS&AI — DEPARTMENT OF CSE</div>
+  <div class="doc-title">SOFTWARE ENGINEERING AND SYSTEM DESIGN (24CS301PC311)</div>
+  <div class="doc-sub"><strong>ASSIGNMENT 05 / 12:</strong> AGILE / SCRUM SIMULATION REPORT</div>
+  <div style="margin-top: 15px; font-size: 12pt; color: #64748b;">Case Study 1: Online Food Ordering Application</div>
+
+  <table class="meta-table">
+    <tr><th>Student Full Name</th><td><strong>M. Hemavardhan</strong></td></tr>
+    <tr><th>Hall Ticket Number</th><td><strong>2403A51422</strong></td></tr>
+    <tr><th>Course Code & Title</th><td>24CS301PC311 — Software Engineering and System Design</td></tr>
+    <tr><th>Academic Year & Semester</th><td>2026–2027 | III Year / I Semester (III/I SEM)</td></tr>
+    <tr><th>Curriculum Regulation</th><td>R24</td></tr>
+    <tr><th>Department & School</th><td>Dept. of CSE | School of CS&AI | SR University</td></tr>
+    <tr><th>Course Coordinator</th><td>Dr. N. Sharmila Banu</td></tr>
+    <tr><th>Course Instructor</th><td>Dr. Asha S</td></tr>
+    <tr><th>GitHub Repository</th><td><code>https://github.com/Mhemavardhan/2403a51422-sesd-assignment-5</code></td></tr>
+  </table>
+</div>
+
+<h2>1. Executive Summary & Problem Statement</h2>
+<p>
+  This assignment report delivers a comprehensive Agile/Scrum simulation for <strong>Case Study 1: Online Food Ordering App</strong> from the official SESD Assignment 5 specification. The project designs and delivers a full-stack solution called <strong>FoodSwift</strong>, allowing campus students and faculty to browse restaurants, explore categorized menus, manage a shopping cart, simulate digital payments, and track orders through a live 5-stage progression stepper.
+</p>
+
+<h2>2. Product Backlog & User Stories</h2>
+<p>
+  Using Planning Poker relative estimation with the Fibonacci sequence (1, 2, 3, 5, 8), the Product Backlog was partitioned into 5 core user stories and 12 sub-issues totaling 26 Story Points, directly recreating the reference assignment workflow.
+</p>
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Issue #</th>
+      <th>Type</th>
+      <th>Title / User Story</th>
+      <th>Priority</th>
+      <th>Points</th>
+      <th>Iteration</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>#1</strong></td><td>Epic</td><td><strong>Customer Login and Registration</strong></td><td>High</td><td>3</td><td>Iteration 1</td><td>In Progress</td></tr>
+    <tr><td>↳ #7</td><td>Task</td><td>Create Login UI</td><td>High</td><td>1</td><td>Iteration 1</td><td>In Progress</td></tr>
+    <tr><td>↳ #8</td><td>Task</td><td>Create Username Field</td><td>High</td><td>1</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td>↳ #9</td><td>Task</td><td>Create Password Field</td><td>High</td><td>1</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td>↳ #10</td><td>Task</td><td>Implement Login Validation</td><td>High</td><td>1</td><td>Iteration 1</td><td>Testing</td></tr>
+    <tr><td>↳ #11</td><td>Task</td><td>Display Error Message</td><td>Medium</td><td>1</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td>↳ #12</td><td>Task</td><td>Test Login</td><td>High</td><td>1</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td><strong>#3</strong></td><td>Epic</td><td><strong>Browse Restaurants and Menus</strong></td><td>High</td><td>5</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td>↳ #13</td><td>Task</td><td>Create Restaurant Page</td><td>High</td><td>1</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td>↳ #14</td><td>Task</td><td>Display Restaurants</td><td>High</td><td>1</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td>↳ #15</td><td>Task</td><td>Create Menu Page</td><td>High</td><td>1</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td>↳ #16</td><td>Task</td><td>Display Food Items</td><td>High</td><td>1</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td>↳ #17</td><td>Task</td><td>Display Food Prices</td><td>Medium</td><td>1</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td>↳ #18</td><td>Task</td><td>Test Menu</td><td>High</td><td>1</td><td>Iteration 1</td><td>Todo</td></tr>
+    <tr><td><strong>#4</strong></td><td>Epic</td><td><strong>Shopping Cart</strong></td><td>High</td><td>5</td><td>Iteration 2</td><td>Todo</td></tr>
+    <tr><td><strong>#5</strong></td><td>Epic</td><td><strong>Online Payment (Mock Gateway)</strong></td><td>High</td><td>8</td><td>Iteration 2</td><td>Done</td></tr>
+    <tr><td><strong>#6</strong></td><td>Epic</td><td><strong>Order Tracking</strong></td><td>Medium</td><td>5</td><td>Iteration 3</td><td>Todo</td></tr>
+  </tbody>
+</table>
+
+<h2>3. Sprint Schedules & Increments</h2>
+<ul>
+  <li><strong>Iteration 1 (Oct 14 – Oct 27):</strong> Foundation sprint delivering customer authentication with salted SHA-256 hashing and restaurant/menu browsing.</li>
+  <li><strong>Iteration 2 (Oct 28 – Nov 10):</strong> Ordering sprint delivering dynamic shopping cart management and mock digital payment processing.</li>
+  <li><strong>Iteration 3 (Nov 11 – Nov 24):</strong> Quality & tracking sprint delivering real-time 5-stage order status tracking, automated test verification, and documentation.</li>
+</ul>
+
+<h2>4. Automated Test Verification</h2>
+<p>All automated unit and integration tests executed cleanly with 100% pass rate in 0.008 seconds:</p>
+<pre>
+test_01_database_tables_exist: PASS
+test_02_password_hashing_security: PASS (Salted SHA-256 confirmed)
+test_03_default_seeded_restaurants: PASS (4 restaurants, 16 menu items)
+test_04_user_registration_and_authentication: PASS
+test_05_cart_and_mock_checkout: PASS (Subtotal, delivery, mock payment verified)
+test_06_order_tracking_progression: PASS (5 stages verified: Placed -> Delivered)
+
+Total: 6 Passed, 0 Failed. Status: 100% OK
+</pre>
+
+<h2>5. Student Verification & Sign-Off</h2>
+<p>
+  <strong>Student Name:</strong> M. Hemavardhan<br>
+  <strong>Hall Ticket Number:</strong> 2403A51422<br>
+  <strong>Subject:</strong> Software Engineering and System Design (SESD)<br>
+  <strong>Institution:</strong> SR University, Warangal
+</p>
+</body>
+</html>

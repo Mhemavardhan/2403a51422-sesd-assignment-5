@@ -1,0 +1,341 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R >>
+endobj
+6 0 obj
+<< /Length 2636 >>
+sstream
+BT
+/F2 14 Tf
+50 760 Td
+(SR UNIVERSITY - SCHOOL OF CS&AI - DEPARTMENT OF CSE) Tj
+-50 -760 Td
+/F2 12 Tf
+50 740 Td
+(SOFTWARE ENGINEERING AND SYSTEM DESIGN \(24CS301PC311\)) Tj
+-50 -740 Td
+/F2 12 Tf
+50 720 Td
+(ASSIGNMENT 05/12: AGILE/SCRUM SIMULATION REPORT) Tj
+-50 -720 Td
+/F1 11 Tf
+50 700 Td
+(Case Study 1: Online Food Ordering Application) Tj
+-50 -700 Td
+/F1 10 Tf
+50 684 Td
+(===========================================================================) Tj
+-50 -684 Td
+/F2 11 Tf
+50 668 Td
+(STUDENT INFORMATION & ACADEMIC RECORD:) Tj
+-50 -668 Td
+/F1 10 Tf
+50 652 Td
+(Student Name: M. Hemavardhan) Tj
+-50 -652 Td
+/F1 10 Tf
+50 636 Td
+(Hall Ticket Number: 2403A51422) Tj
+-50 -636 Td
+/F1 10 Tf
+50 620 Td
+(Course: Software Engineering and System Design \(24CS301PC311\)) Tj
+-50 -620 Td
+/F1 10 Tf
+50 604 Td
+(Academic Year: 2026-2027 | Year/Sem: III/I SEM | Regulation: R24) Tj
+-50 -604 Td
+/F1 10 Tf
+50 588 Td
+(Course Coordinator: Dr. N. Sharmila Banu | Instructor: Dr. Asha S) Tj
+-50 -588 Td
+/F1 10 Tf
+50 572 Td
+(GitHub Repository: https://github.com/Mhemavardhan/2403a51422-sesd-assignment-5) Tj
+-50 -572 Td
+/F1 10 Tf
+50 556 Td
+(===========================================================================) Tj
+-50 -556 Td
+/F2 12 Tf
+50 524 Td
+(1. ASSIGNMENT OBJECTIVES) Tj
+-50 -524 Td
+/F1 10 Tf
+50 504 Td
+(  * Master Agile/Scrum ceremonies, artifacts, and engineering workflows.) Tj
+-50 -504 Td
+/F1 10 Tf
+50 488 Td
+(  * Formulate INVEST user stories with measurable acceptance criteria.) Tj
+-50 -488 Td
+/F1 10 Tf
+50 472 Td
+(  * Recreate GitHub Projects Scrum board with custom fields and iterations.) Tj
+-50 -472 Td
+/F1 10 Tf
+50 456 Td
+(  * Deliver a functional, testable full-stack application and automated test suite.) Tj
+-50 -456 Td
+/F2 12 Tf
+50 424 Td
+(2. PROBLEM STATEMENT \(CASE STUDY 1\)) Tj
+-50 -424 Td
+/F1 10 Tf
+50 404 Td
+(  Design an application that allows users to browse restaurants, add food) Tj
+-50 -404 Td
+/F1 10 Tf
+50 388 Td
+(  items to a cart, pay online, and track their orders in real time.) Tj
+-50 -388 Td
+/F1 10 Tf
+50 372 Td
+(  Deliverables: Backlog with Login, Browse Menu, Cart, Payment, Tracking.) Tj
+-50 -372 Td
+/F2 12 Tf
+50 340 Td
+(3. PRODUCT VISION \(FOODSWIFT\)) Tj
+-50 -340 Td
+/F1 10 Tf
+50 320 Td
+(  For SR University students and faculty who need fast meal ordering,) Tj
+-50 -320 Td
+/F1 10 Tf
+50 304 Td
+(  FoodSwift is an Agile-engineered web solution providing instant menu) Tj
+-50 -304 Td
+/F1 10 Tf
+50 288 Td
+(  discovery, dynamic basket calculations, simulated digital payments,) Tj
+-50 -288 Td
+/F1 10 Tf
+50 272 Td
+(  and live 5-stage order progression tracking without long cafeteria lines.) Tj
+-50 -272 Td
+ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 2262 >>
+sstream
+BT
+/F2 12 Tf
+50 760 Td
+(4. PRODUCT BACKLOG & STORY POINTS \(26 POINTS TOTAL\)) Tj
+-50 -760 Td
+/F1 10 Tf
+50 740 Td
+(===========================================================================) Tj
+-50 -740 Td
+/F2 10 Tf
+50 724 Td
+(#1 Customer Login and Registration \(High Priority, 3 pts, Iteration 1\)) Tj
+-50 -724 Td
+/F1 9 Tf
+50 708 Td
+(   - Sub-issues #7 to #12: UI, Username, Password, Validation, Error, Tests) Tj
+-50 -708 Td
+/F2 10 Tf
+50 692 Td
+(#3 Browse Restaurants and Menus \(High Priority, 5 pts, Iteration 1\)) Tj
+-50 -692 Td
+/F1 9 Tf
+50 676 Td
+(   - Sub-issues #13 to #18: Catalog, Menu Page, Veg/Non-Veg, Pricing, Tests) Tj
+-50 -676 Td
+/F2 10 Tf
+50 660 Td
+(#4 Shopping Cart Management \(High Priority, 5 pts, Iteration 2\)) Tj
+-50 -660 Td
+/F1 9 Tf
+50 644 Td
+(   - Slide-in cart drawer, +/- quantity controls, subtotal calculations) Tj
+-50 -644 Td
+/F2 10 Tf
+50 628 Td
+(#5 Online Payment Simulation \(High Priority, 8 pts, Iteration 2\)) Tj
+-50 -628 Td
+/F1 9 Tf
+50 612 Td
+(   - Mock payment gateway \(UPI/Card/COD\) with unique transaction ID) Tj
+-50 -612 Td
+/F2 10 Tf
+50 596 Td
+(#6 Real-Time Order Tracking \(Medium Priority, 5 pts, Iteration 3\)) Tj
+-50 -596 Td
+/F1 9 Tf
+50 580 Td
+(   - 5-stage stepper: Placed -> Confirmed -> Preparing -> Out for Delivery -> Delivered) Tj
+-50 -580 Td
+/F2 12 Tf
+50 548 Td
+(5. SPRINT PLANNING & ITERATION CYCLES) Tj
+-50 -548 Td
+/F1 10 Tf
+50 528 Td
+(===========================================================================) Tj
+-50 -528 Td
+/F1 10 Tf
+50 512 Td
+(Iteration 1 \(Oct 14 - Oct 27\): Foundation - Auth, Database & Catalog \(8 pts\)) Tj
+-50 -512 Td
+/F1 10 Tf
+50 496 Td
+(Iteration 2 \(Oct 28 - Nov 10\): Ordering - Shopping Cart & Mock Payment \(13 pts\)) Tj
+-50 -496 Td
+/F1 10 Tf
+50 480 Td
+(Iteration 3 \(Nov 11 - Nov 24\): Tracking - 5-Stage Stepper & QA Suite \(5 pts\)) Tj
+-50 -480 Td
+/F2 12 Tf
+50 448 Td
+(6. GITHUB PROJECTS CUSTOM FIELDS & WORKFLOW) Tj
+-50 -448 Td
+/F1 10 Tf
+50 428 Td
+(  * Status: Todo, In Progress, Testing, Done) Tj
+-50 -428 Td
+/F1 10 Tf
+50 412 Td
+(  * Priority: High, Medium, Low \(Single Select\)) Tj
+-50 -412 Td
+/F1 10 Tf
+50 396 Td
+(  * Story Points: 1, 2, 3, 5, 8 \(Number\)) Tj
+-50 -396 Td
+/F1 10 Tf
+50 380 Td
+(  * Iteration: 2-week timeboxed sprint intervals) Tj
+-50 -380 Td
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 2148 >>
+sstream
+BT
+/F2 12 Tf
+50 760 Td
+(7. AUTOMATED TEST RESULTS & VERIFICATION LOG) Tj
+-50 -760 Td
+/F1 10 Tf
+50 740 Td
+(===========================================================================) Tj
+-50 -740 Td
+/F1 10 Tf
+50 724 Td
+(Executed: python3 app/test_app.py -v \(All 6 tests passed in 0.008s\)) Tj
+-50 -724 Td
+/F1 10 Tf
+50 708 Td
+(  * test_01_database_tables_exist ................................... PASS) Tj
+-50 -708 Td
+/F1 10 Tf
+50 692 Td
+(  * test_02_password_hashing_security \(Salted SHA-256\) .............. PASS) Tj
+-50 -692 Td
+/F1 10 Tf
+50 676 Td
+(  * test_03_default_seeded_restaurants \(4 restaurants, 16 dishes\) ... PASS) Tj
+-50 -676 Td
+/F1 10 Tf
+50 660 Td
+(  * test_04_user_registration_and_authentication ................... PASS) Tj
+-50 -660 Td
+/F1 10 Tf
+50 644 Td
+(  * test_05_cart_and_mock_checkout \(Subtotal + Mock Payment\) ........ PASS) Tj
+-50 -644 Td
+/F1 10 Tf
+50 628 Td
+(  * test_06_order_tracking_progression \(5-Stage Stepper\) ............ PASS) Tj
+-50 -628 Td
+/F2 10 Tf
+50 612 Td
+(Status: 100% OK, Zero Defects in Core User Paths.) Tj
+-50 -612 Td
+/F2 12 Tf
+50 580 Td
+(8. THREE-TIER SOFTWARE ARCHITECTURE) Tj
+-50 -580 Td
+/F1 10 Tf
+50 560 Td
+(  * Presentation Tier: Responsive SPA \(HTML5, Modern CSS3, Vanilla JS\)) Tj
+-50 -560 Td
+/F1 10 Tf
+50 544 Td
+(  * Application Tier: Python HTTP Server REST API \(server.py\)) Tj
+-50 -544 Td
+/F1 10 Tf
+50 528 Td
+(  * Data Tier: SQLite3 Relational Database \(food_ordering.db\)) Tj
+-50 -528 Td
+/F2 12 Tf
+50 496 Td
+(9. ACADEMIC REFLECTION & SIGN-OFF) Tj
+-50 -496 Td
+/F1 10 Tf
+50 476 Td
+(  The Agile/Scrum simulation demonstrated that iterative increments, empirical) Tj
+-50 -476 Td
+/F1 10 Tf
+50 460 Td
+(  feedback during Sprint Reviews, and strict Definition of Done adherence) Tj
+-50 -460 Td
+/F1 10 Tf
+50 444 Td
+(  significantly increase product quality over traditional Waterfall methods.) Tj
+-50 -444 Td
+/F2 11 Tf
+50 412 Td
+(Submitted by: M. Hemavardhan) Tj
+-50 -412 Td
+/F2 11 Tf
+50 396 Td
+(Hall Ticket: 2403A51422 | Department of CSE | SR University) Tj
+-50 -396 Td
+/F1 10 Tf
+50 380 Td
+(Repository URL: https://github.com/Mhemavardhan/2403a51422-sesd-assignment-5) Tj
+-50 -380 Td
+ET
+endstream
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000197 00000 n 
+0000000272 00000 n 
+0000000408 00000 n 
+0000003096 00000 n 
+0000003232 00000 n 
+0000005546 00000 n 
+0000005683 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+7884
+%%EOF

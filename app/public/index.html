@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodSwift | Online Food Ordering System - SESD Assignment 5</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand-logo" onclick="switchTab('restaurants')">
+        <span class="logo-icon">🍔</span>
+        <div>
+          <span class="logo-text">Food<span class="accent">Swift</span></span>
+          <span class="academic-badge">SESD Assignment 5</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <button class="nav-btn active" id="nav-restaurants" onclick="switchTab('restaurants')">🍽️ Restaurants</button>
+        <button class="nav-btn" id="nav-scrum" onclick="switchTab('scrum')">📋 Agile/Scrum Board</button>
+        <button class="nav-btn" id="nav-tracking" onclick="switchTab('tracking')">🛵 Order Tracking</button>
+      </nav>
+
+      <div class="nav-actions">
+        <div id="user-profile-badge" class="user-pill hidden">
+          <span class="user-avatar">👤</span>
+          <span id="logged-user-name">M. Hemavardhan</span>
+          <button class="btn-logout" onclick="logout()" title="Logout">✕</button>
+        </div>
+        <button class="btn-primary" id="btn-open-auth" onclick="openAuthModal()">Login / Register</button>
+        <button class="cart-trigger" onclick="toggleCart()">
+          🛒 Cart <span class="cart-counter" id="cart-counter">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="main-layout">
+    <!-- Student Header Notice -->
+    <div class="student-banner">
+      <div class="student-info">
+        <span><strong>Student:</strong> M. Hemavardhan | <strong>Hall Ticket:</strong> 2403A51422</span>
+        <span><strong>Course:</strong> SESD (24CS301PC311) | <strong>University:</strong> SR University (School of CS&AI)</span>
+      </div>
+      <div class="status-indicator">
+        <span class="live-dot"></span> System Live & Testable (Agile Sprints 1, 2 & 3 Integrated)
+      </div>
+    </div>
+
+    <!-- TAB 1: RESTAURANT & MENU BROWSING -->
+    <section id="tab-restaurants" class="tab-content active">
+      <div class="hero-section">
+        <div class="hero-text">
+          <h1>Craving Delicious Food? <span class="highlight">Order in Seconds.</span></h1>
+          <p>Browse top-rated campus and city restaurants, select curated dishes, and track your orders live.</p>
+        </div>
+        <div class="search-filter-bar">
+          <input type="text" id="restaurant-search" placeholder="Search cuisines, dishes, or restaurants..." onkeyup="filterRestaurants()">
+          <div class="cuisine-filters">
+            <button class="filter-pill active" onclick="filterCuisine('all', this)">All</button>
+            <button class="filter-pill" onclick="filterCuisine('Biryani', this)">Biryani</button>
+            <button class="filter-pill" onclick="filterCuisine('Italian', this)">Italian</button>
+            <button class="filter-pill" onclick="filterCuisine('North Indian', this)">North Indian</button>
+            <button class="filter-pill" onclick="filterCuisine('Vegan', this)">Vegan & Healthy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restaurant Cards Grid -->
+      <div id="restaurants-container">
+        <h2 class="section-title">Featured Restaurants Near SR University</h2>
+        <div class="restaurant-grid" id="restaurant-grid">
+          <div class="loading-spinner">Loading restaurants...</div>
+        </div>
+      </div>
+
+      <!-- Menu View Modal / Overlay -->
+      <div id="menu-modal" class="modal">
+        <div class="modal-dialog large">
+          <div class="modal-header">
+            <div id="menu-modal-title">
+              <h2>Restaurant Menu</h2>
+              <p id="menu-modal-subtitle">Delicious dishes crafted fresh</p>
+            </div>
+            <button class="close-btn" onclick="closeMenuModal()">&times;</button>
+          </div>
+          <div class="modal-body" id="menu-items-list">
+            <!-- Dynamic Menu Items -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 2: LIVE ORDER TRACKING -->
+    <section id="tab-tracking" class="tab-content">
+      <div class="tracking-container">
+        <div class="tracking-header">
+          <h2>🛵 Real-Time Order Tracking</h2>
+          <p>Track your food preparation and delivery milestone stages in real time.</p>
+        </div>
+
+        <div class="tracking-card" id="tracking-card">
+          <div class="tracking-input-box">
+            <label for="track-order-input">Enter Order Number:</label>
+            <div class="track-input-group">
+              <input type="text" id="track-order-input" placeholder="e.g. ORD-A1B2C3D4">
+              <button class="btn-primary" onclick="lookupOrderTracking()">Track Order</button>
+            </div>
+          </div>
+
+          <div id="active-order-tracking" class="hidden">
+            <div class="order-meta-banner">
+              <div>
+                <span class="meta-label">Order Number</span>
+                <span class="meta-val" id="track-ord-num">#ORD-12345678</span>
+              </div>
+              <div>
+                <span class="meta-label">Restaurant</span>
+                <span class="meta-val" id="track-ord-restaurant">Paradise Biryani</span>
+              </div>
+              <div>
+                <span class="meta-label">Estimated Time</span>
+                <span class="meta-val highlight-green" id="track-ord-eta">25 Mins</span>
+              </div>
+              <div>
+                <span class="meta-label">Total Amount</span>
+                <span class="meta-val" id="track-ord-amount">₹320.00</span>
+              </div>
+            </div>
+
+            <!-- Visual Stepper Progress Bar -->
+            <div class="stepper-wrapper">
+              <div class="step-progress-bar">
+                <div class="step-progress-fill" id="step-progress-fill" style="width: 25%;"></div>
+              </div>
+              <div class="steps-row">
+                <div class="step-node" id="step-0">
+                  <div class="step-circle">1</div>
+                  <div class="step-title">Order Placed</div>
+                  <div class="step-sub">Payment verified</div>
+                </div>
+                <div class="step-node" id="step-1">
+                  <div class="step-circle">2</div>
+                  <div class="step-title">Confirmed</div>
+                  <div class="step-sub">Kitchen accepted</div>
+                </div>
+                <div class="step-node" id="step-2">
+                  <div class="step-circle">3</div>
+                  <div class="step-title">Preparing</div>
+                  <div class="step-sub">Chef cooking dish</div>
+                </div>
+                <div class="step-node" id="step-3">
+                  <div class="step-circle">4</div>
+                  <div class="step-title">Out for Delivery</div>
+                  <div class="step-sub">Rider en route</div>
+                </div>
+                <div class="step-node" id="step-4">
+                  <div class="step-circle">5</div>
+                  <div class="step-title">Delivered</div>
+                  <div class="step-sub">Enjoy your meal!</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Simulation Controller -->
+            <div class="simulation-controls">
+              <div class="sim-info">
+                <strong>Simulated Scrum Stage Tester:</strong>
+                <span>Advance the order state to simulate delivery lifecycle progression.</span>
+              </div>
+              <button class="btn-advance" id="btn-advance-status" onclick="advanceOrderStatus()">
+                ⚡ Advance Order Status Next Step
+              </button>
+            </div>
+
+            <!-- Order Items Summary in Tracking -->
+            <div class="tracking-items-summary" id="track-items-summary">
+              <!-- Rendered items -->
+            </div>
+          </div>
+
+          <div id="no-tracking-state" class="empty-state">
+            <div class="empty-icon">📦</div>
+            <h3>No Active Order Selected</h3>
+            <p>Place an order through the menu checkout, or enter your order number above.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAB 3: AGILE & SCRUM PROJECT DASHBOARD (REPRODUCED FROM REFERENCE DOCX) -->
+    <section id="tab-scrum" class="tab-content">
+      <div class="scrum-header">
+        <div class="scrum-title-block">
+          <h2>GitHub Projects Scrum Board — Online Food Ordering</h2>
+          <p>Academic Agile/Scrum Simulation recreating the exact 3-Sprint workflow, Custom Fields, and Kanban Board from Reference DOCX.</p>
+        </div>
+        <div class="scrum-meta-stats">
+          <div class="stat-pill"><strong>Total Backlog Items:</strong> 18</div>
+          <div class="stat-pill"><strong>Velocity:</strong> 26 Story Points</div>
+          <div class="stat-pill"><strong>Sprints:</strong> 3 Iterations</div>
+        </div>
+      </div>
+
+      <!-- Kanban Columns View -->
+      <div class="kanban-container">
+        <!-- Todo Column -->
+        <div class="kanban-column" id="col-todo">
+          <div class="col-header">
+            <div class="col-title"><span class="col-dot todo"></span> Todo</div>
+            <span class="count-badge" id="count-todo">12</span>
+          </div>
+          <div class="col-cards" id="cards-todo">
+            <!-- Dynamic Kanban Cards -->
+          </div>
+        </div>
+
+        <!-- In Progress Column -->
+        <div class="kanban-column" id="col-progress">
+          <div class="col-header">
+            <div class="col-title"><span class="col-dot progress"></span> In Progress</div>
+            <span class="count-badge" id="count-progress">2</span>
+          </div>
+          <div class="col-cards" id="cards-progress">
+            <!-- Dynamic Kanban Cards -->
+          </div>
+        </div>
+
+        <!-- Testing Column -->
+        <div class="kanban-column" id="col-testing">
+          <div class="col-header">
+            <div class="col-title"><span class="col-dot testing"></span> Testing</div>
+            <span class="count-badge" id="count-testing">2</span>
+          </div>
+          <div class="col-cards" id="cards-testing">
+            <!-- Dynamic Kanban Cards -->
+          </div>
+        </div>
+
+        <!-- Done Column -->
+        <div class="kanban-column" id="col-done">
+          <div class="col-header">
+            <div class="col-title"><span class="col-dot done"></span> Done</div>
+            <span class="count-badge" id="count-done">2</span>
+          </div>
+          <div class="col-cards" id="cards-done">
+            <!-- Dynamic Kanban Cards -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Backlog & Custom Fields Table (Replicating DOCX Table View) -->
+      <div class="table-view-section">
+        <h3>Product Backlog Table & Custom Fields (DOCX View 1 Reproduction)</h3>
+        <div class="table-responsive">
+          <table class="scrum-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Title / User Story</th>
+                <th>Assignee</th>
+                <th>Status</th>
+                <th>Priority</th>
+                <th>Story Points</th>
+                <th>Iteration</th>
+              </tr>
+            </thead>
+            <tbody id="scrum-table-body">
+              <!-- Seeded rows matching exact assignment -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Drawer Sidebar -->
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="drawer-header">
+      <h3>Your Food Basket</h3>
+      <button class="close-drawer" onclick="toggleCart()">&times;</button>
+    </div>
+    <div class="drawer-body" id="cart-drawer-items">
+      <div class="empty-cart-msg">Your cart is currently empty. Add tasty dishes!</div>
+    </div>
+    <div class="drawer-footer" id="cart-drawer-footer">
+      <div class="price-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">₹0.00</span>
+      </div>
+      <div class="price-row">
+        <span>Delivery Partner Fee</span>
+        <span id="cart-delivery-fee">₹40.00</span>
+      </div>
+      <div class="price-row total">
+        <span>Total Payable</span>
+        <span id="cart-total-payable">₹0.00</span>
+      </div>
+      <button class="btn-checkout" onclick="openCheckoutModal()" id="btn-checkout">Proceed to Mock Checkout →</button>
+    </div>
+  </aside>
+
+  <!-- Checkout & Mock Payment Modal -->
+  <div class="modal" id="checkout-modal">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <h2>Order Checkout & Payment</h2>
+          <p>SESD Assignment Mock Payment Simulation</p>
+        </div>
+        <button class="close-btn" onclick="closeCheckoutModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="checkout-form" onsubmit="handleCheckoutSubmit(event)">
+          <div class="form-group">
+            <label>Delivery Address</label>
+            <input type="text" id="checkout-address" required value="SR University Hostels, Warangal, Telangana">
+          </div>
+
+          <div class="form-group">
+            <label>Payment Method (Simulated Gateway)</label>
+            <div class="payment-options">
+              <label class="pay-radio">
+                <input type="radio" name="paymethod" value="UPI" checked>
+                <span>📱 UPI (GPay / PhonePe / Paytm)</span>
+              </label>
+              <label class="pay-radio">
+                <input type="radio" name="paymethod" value="Card">
+                <span>💳 Credit / Debit Card (Mock)</span>
+              </label>
+              <label class="pay-radio">
+                <input type="radio" name="paymethod" value="COD">
+                <span>💵 Cash on Delivery</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="checkout-summary-box">
+            <div class="summary-line">
+              <span>Items Total:</span>
+              <strong id="modal-subtotal">₹0.00</strong>
+            </div>
+            <div class="summary-line">
+              <span>Delivery Fee:</span>
+              <strong id="modal-delivery">₹40.00</strong>
+            </div>
+            <div class="summary-line grand-total">
+              <span>Total Amount:</span>
+              <strong id="modal-grand-total">₹0.00</strong>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary full-width" id="btn-pay-now">
+            🔒 Pay & Place Order (Mock Verification)
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Auth Modal (Login / Register) -->
+  <div class="modal" id="auth-modal">
+    <div class="modal-dialog small">
+      <div class="modal-header">
+        <div class="auth-tabs">
+          <button class="auth-tab-btn active" id="tab-login-btn" onclick="toggleAuthMode('login')">Login</button>
+          <button class="auth-tab-btn" id="tab-register-btn" onclick="toggleAuthMode('register')">Register</button>
+        </div>
+        <button class="close-btn" onclick="closeAuthModal()">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Login Form -->
+        <form id="login-form" onsubmit="handleLogin(event)">
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="login-email" required value="hemavardhan@sru.edu.in">
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="login-password" required value="demo123">
+          </div>
+          <div id="login-error" class="alert-box error hidden"></div>
+          <button type="submit" class="btn-primary full-width">Sign In</button>
+        </form>
+
+        <!-- Register Form -->
+        <form id="register-form" class="hidden" onsubmit="handleRegister(event)">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" id="reg-name" required placeholder="e.g. M. Hemavardhan">
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" id="reg-email" required placeholder="user@sru.edu.in">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" id="reg-phone" placeholder="+91 9876543210">
+          </div>
+          <div class="form-group">
+            <label>Delivery Address</label>
+            <input type="text" id="reg-address" placeholder="Hostel Block, SR University">
+          </div>
+          <div class="form-group">
+            <label>Password (min 6 chars)</label>
+            <input type="password" id="reg-password" minlength="6" required placeholder="••••••••">
+          </div>
+          <div id="register-error" class="alert-box error hidden"></div>
+          <button type="submit" class="btn-primary full-width">Create Account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
