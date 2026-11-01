@@ -43,7 +43,15 @@ The system demonstrates:
 
 ## 📋 GitHub Projects & Scrum Board Recreation
 
-The GitHub Project (`Online Food Ordering - Scrum Project`) reproduces the exact workflow demonstrated in the reference assignment:
+The GitHub Project (**[Online Food Ordering - Scrum Project](https://github.com/users/Mhemavardhan/projects/1)**) reproduces the exact Agile/Scrum workflow demonstrated in the reference assignment:
+
+* **Live GitHub Project URL:** [https://github.com/users/Mhemavardhan/projects/1](https://github.com/users/Mhemavardhan/projects/1)
+* **Linked Repository:** `Mhemavardhan/2403a51422-sesd-assignment-5`
+* **Configured Views:**
+  1. `Product Backlog` (Table View — Full backlog with priority and story points)
+  2. `Sprint Board` (Board View — Kanban cards distributed across workflow columns)
+  3. `Sprint Planning` (Table View — Sprint allocation and estimation)
+  4. `Testing` (Board View — Verification stage tracking)
 
 ### 1. Custom Metadata Fields
 * **Status:** `Todo`, `In Progress`, `Done`, `Testing`
@@ -55,23 +63,39 @@ The GitHub Project (`Online Food Ordering - Scrum Project`) reproduces the exact
   * **Iteration 3:** Nov 11 – Nov 24 (Tracking: Real-Time Stepper & Quality)
 
 ### 2. Backlog Hierarchy (Parent & Sub-Issues)
-* **#1 Customer Login** (High Priority, 3 pts, Iteration 1)
-  * `↳ #7` Create Login UI (1 pt)
-  * `↳ #8` Create Username Field (1 pt)
-  * `↳ #9` Create Password Field (1 pt)
-  * `↳ #10` Implement Login Validation (1 pt)
-  * `↳ #11` Display Error Message (1 pt)
-  * `↳ #12` Test Login (1 pt)
-* **#3 Browse Restaurants and Menu** (High Priority, 5 pts, Iteration 1)
-  * `↳ #13` Create Restaurant Page (1 pt)
-  * `↳ #14` Display Restaurants (1 pt)
-  * `↳ #15` Create Menu Page (1 pt)
-  * `↳ #16` Display Food Items (1 pt)
-  * `↳ #17` Display Food Prices (1 pt)
-  * `↳ #18` Test Menu (1 pt)
-* **#4 Shopping Cart** (High Priority, 5 pts, Iteration 2)
-* **#5 Online Payment** (High Priority, 8 pts, Iteration 2)
-* **#6 Order Tracking** (Medium Priority, 5 pts, Iteration 3)
+* **#1 Customer Login** (High Priority, 3 pts, Iteration 1, In Progress)
+  * `↳ #2` Create Login UI (1 pt, In Progress)
+  * `↳ #3` Create Username Field (1 pt, Todo)
+  * `↳ #4` Create Password Field (1 pt, Todo)
+  * `↳ #5` Implement Login Validation (1 pt, Testing)
+  * `↳ #6` Display Error Message (1 pt, Todo)
+  * `↳ #7` Test Login (1 pt, Todo)
+* **#8 Browse Restaurants and Menu** (High Priority, 5 pts, Iteration 1, Todo)
+  * `↳ #9` Create Restaurant Page (1 pt, Todo)
+  * `↳ #10` Display Restaurants (1 pt, Todo)
+  * `↳ #11` Create Menu Page (1 pt, Todo)
+  * `↳ #12` Display Food Items (1 pt, Todo)
+  * `↳ #13` Display Food Prices (1 pt, Todo)
+  * `↳ #14` Test Menu (1 pt, Todo)
+* **#15 Shopping Cart** (High Priority, 5 pts, Iteration 2, Todo)
+  * `↳ #16` Create Cart UI (1 pt, Todo)
+  * `↳ #17` Add Items to Cart (1 pt, Todo)
+  * `↳ #18` Update Item Quantity (1 pt, Todo)
+  * `↳ #19` Remove Items from Cart (1 pt, Todo)
+  * `↳ #20` Calculate Total Price (1 pt, Todo)
+  * `↳ #21` Test Cart Functionality (1 pt, Todo)
+* **#22 Online Payment** (High Priority, 8 pts, Iteration 2, Done)
+  * `↳ #23` Create Checkout UI (2 pts, Done)
+  * `↳ #24` Implement Order Summary (2 pts, Done)
+  * `↳ #25` Implement Mock Payment Flow (2 pts, Done)
+  * `↳ #26` Handle Payment Success and Failure (1 pt, Done)
+  * `↳ #27` Test Checkout Functionality (1 pt, Done)
+* **#28 Order Tracking** (Medium Priority, 5 pts, Iteration 3, Todo)
+  * `↳ #29` Create Order Tracking UI (1 pt, Todo)
+  * `↳ #30` Generate Order ID (1 pt, Todo)
+  * `↳ #31` Display Order Confirmation (1 pt, Todo)
+  * `↳ #32` Implement Order Status Updates (1 pt, Todo)
+  * `↳ #33` Test Order Tracking (1 pt, Todo)
 
 ---
 

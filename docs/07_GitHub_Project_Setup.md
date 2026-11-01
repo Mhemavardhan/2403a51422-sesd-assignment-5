@@ -26,8 +26,9 @@ This document provides the exhaustive, step-by-step specification for recreating
 
 1. Navigate to GitHub Profile &rarr; **Projects** &rarr; click **New project**.
 2. Select **Board** or **Table** template.
-3. Name the Project: `Online Food Ordering - Scrum Project` (or `SESD Assignment 5 — Online Food Ordering Scrum Project`).
-4. Link repository: Enable **Import items from repository** &rarr; Select `2403a51422-sesd-assignment-5`.
+3. Name the Project: `Online Food Ordering - Scrum Project`.
+4. URL: **`https://github.com/users/Mhemavardhan/projects/1`**
+5. Link repository: Linked to `Mhemavardhan/2403a51422-sesd-assignment-5`.
 
 ---
 
@@ -47,27 +48,49 @@ The project configuration defines four custom metadata fields directly matching 
 ## 5. Step 4: Issue Hierarchy & Task Breakdown
 
 ### Parent Issues (Core User Stories):
-1. **Issue #1:** `Customer Login` (Priority: High, Points: 3, Iteration: Iteration 1)
-2. **Issue #3:** `Browse Restaurants and Menu` (Priority: High, Points: 5, Iteration: Iteration 1)
-3. **Issue #4:** `Shopping Cart` (Priority: High, Points: 5, Iteration: Iteration 2)
-4. **Issue #5:** `Online Payment` (Priority: High, Points: 8, Iteration: Iteration 2)
-5. **Issue #6:** `Order Tracking` (Priority: Medium, Points: 5, Iteration: Iteration 3)
+1. **Issue #1:** `Customer Login` (Priority: High, Points: 3, Iteration: Iteration 1, Status: In Progress)
+2. **Issue #8:** `Browse Restaurants and Menu` (Priority: High, Points: 5, Iteration: Iteration 1, Status: Todo)
+3. **Issue #15:** `Shopping Cart` (Priority: High, Points: 5, Iteration: Iteration 2, Status: Todo)
+4. **Issue #22:** `Online Payment` (Priority: High, Points: 8, Iteration: Iteration 2, Status: Done)
+5. **Issue #28:** `Order Tracking` (Priority: Medium, Points: 5, Iteration: Iteration 3, Status: Todo)
 
 ### Sub-Issues Breakdown for Issue #1 (Customer Login):
-* `#7` `Create Login UI` (Status: In Progress, Points: 1, Priority: High)
-* `#8` `Create Username Field` (Status: Todo, Points: 1, Priority: High)
-* `#9` `Create Password Field` (Status: Todo, Points: 1, Priority: High)
-* `#10` `Implement Login Validation` (Status: Testing, Points: 1, Priority: High)
-* `#11` `Display Error Message` (Status: Todo, Points: 1, Priority: Medium)
-* `#12` `Test Login` (Status: Todo, Points: 1, Priority: High)
+* `#2` `Create Login UI` (Status: In Progress, Points: 1, Priority: High)
+* `#3` `Create Username Field` (Status: Todo, Points: 1, Priority: High)
+* `#4` `Create Password Field` (Status: Todo, Points: 1, Priority: High)
+* `#5` `Implement Login Validation` (Status: Testing, Points: 1, Priority: High)
+* `#6` `Display Error Message` (Status: Todo, Points: 1, Priority: Medium)
+* `#7` `Test Login` (Status: Todo, Points: 1, Priority: High)
 
-### Sub-Issues Breakdown for Issue #3 (Browse Restaurants and Menu):
-* `#13` `Create Restaurant Page` (Status: Todo, Points: 1, Priority: High)
-* `#14` `Display Restaurants` (Status: Todo, Points: 1, Priority: High)
-* `#15` `Create Menu Page` (Status: Todo, Points: 1, Priority: High)
-* `#16` `Display Food Items` (Status: Todo, Points: 1, Priority: High)
-* `#17` `Display Food Prices` (Status: Todo, Points: 1, Priority: Medium)
-* `#18` `Test Menu` (Status: Todo, Points: 1, Priority: High)
+### Sub-Issues Breakdown for Issue #8 (Browse Restaurants and Menu):
+* `#9` `Create Restaurant Page` (Status: Todo, Points: 1, Priority: High)
+* `#10` `Display Restaurants` (Status: Todo, Points: 1, Priority: High)
+* `#11` `Create Menu Page` (Status: Todo, Points: 1, Priority: High)
+* `#12` `Display Food Items` (Status: Todo, Points: 1, Priority: High)
+* `#13` `Display Food Prices` (Status: Todo, Points: 1, Priority: Medium)
+* `#14` `Test Menu` (Status: Todo, Points: 1, Priority: High)
+
+### Sub-Issues Breakdown for Issue #15 (Shopping Cart):
+* `#16` `Create Cart UI` (Status: Todo, Points: 1, Priority: High)
+* `#17` `Add Items to Cart` (Status: Todo, Points: 1, Priority: High)
+* `#18` `Update Item Quantity` (Status: Todo, Points: 1, Priority: High)
+* `#19` `Remove Items from Cart` (Status: Todo, Points: 1, Priority: High)
+* `#20` `Calculate Total Price` (Status: Todo, Points: 1, Priority: High)
+* `#21` `Test Cart Functionality` (Status: Todo, Points: 1, Priority: Medium)
+
+### Sub-Issues Breakdown for Issue #22 (Online Payment):
+* `#23` `Create Checkout UI` (Status: Done, Points: 2, Priority: High)
+* `#24` `Implement Order Summary` (Status: Done, Points: 2, Priority: High)
+* `#25` `Implement Mock Payment Flow` (Status: Done, Points: 2, Priority: High)
+* `#26` `Handle Payment Success and Failure` (Status: Done, Points: 1, Priority: High)
+* `#27` `Test Checkout Functionality` (Status: Done, Points: 1, Priority: High)
+
+### Sub-Issues Breakdown for Issue #28 (Order Tracking):
+* `#29` `Create Order Tracking UI` (Status: Todo, Points: 1, Priority: Medium)
+* `#30` `Generate Order ID` (Status: Todo, Points: 1, Priority: Medium)
+* `#31` `Display Order Confirmation` (Status: Todo, Points: 1, Priority: Medium)
+* `#32` `Implement Order Status Updates` (Status: Todo, Points: 1, Priority: Medium)
+* `#33` `Test Order Tracking` (Status: Todo, Points: 1, Priority: Low)
 
 ---
 
@@ -93,7 +116,7 @@ The project configuration defines four custom metadata fields directly matching 
 
 During the simulation, items flow across the board to illustrate work in progress:
 * `#1 Customer Login` &rarr; Moved to `In Progress`.
-* `#7 Create Login UI` &rarr; Moved to `In Progress`.
-* `#10 Implement Login Validation` &rarr; Moved to `Testing`.
-* `#5 Online Payment` &rarr; Moved to `Done`.
+* `#2 Create Login UI` &rarr; Moved to `In Progress`.
+* `#5 Implement Login Validation` &rarr; Moved to `Testing`.
+* `#22 Online Payment` &rarr; Moved to `Done` (along with sub-issues `#23`–`#27`).
 * Remaining items reside in `Todo` ready for future sprints.

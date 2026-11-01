@@ -32,10 +32,10 @@
 | Feature Name | Backlog Epic # | Technical Implementation | Testing Status |
 | :--- | :---: | :--- | :---: |
 | **Customer Login & Registration** | #1 | Salted SHA-256 password hashing, session tokens, REST API | Passed |
-| **Browse Restaurants & Menu** | #3 | Dynamic catalog, cuisine filtering, modal menu with Veg/Non-Veg | Passed |
-| **Shopping Cart Management** | #4 | Interactive slide drawer, quantity modification, live calculations | Passed |
-| **Online Payment (Mock Gateway)** | #5 | Multi-mode selector (UPI/Card/COD), transaction verification | Passed |
-| **Real-Time Order Tracking** | #6 | 5-stage milestone stepper with live REST status progression | Passed |
+| **Browse Restaurants & Menu** | #8 | Dynamic catalog, cuisine filtering, modal menu with Veg/Non-Veg | Passed |
+| **Shopping Cart Management** | #15 | Interactive slide drawer, quantity modification, live calculations | Passed |
+| **Online Payment (Mock Gateway)** | #22 | Multi-mode selector (UPI/Card/COD), transaction verification | Passed |
+| **Real-Time Order Tracking** | #28 | 5-stage milestone stepper with live REST status progression | Passed |
 
 ---
 
@@ -44,5 +44,6 @@
 The assignment deliverables have been compiled into both interactive source code, a comprehensive Markdown documentation suite, and an academic PDF/Word submission report.
 
 * **Repository:** `https://github.com/Mhemavardhan/2403a51422-sesd-assignment-5`
+* **GitHub Project Board:** `https://github.com/users/Mhemavardhan/projects/1`
 * **Student Signature:** *M. Hemavardhan (2403A51422)*
 * **Date:** 29 October 2026
